@@ -83,6 +83,10 @@ async function startServer() {
     }
   });
 
+  app.get("/", function (req, res) {
+    res.send("Hello World!");
+  });
+
   // Start the Express server
   app.listen({ port: 4000 }, () => {
     console.log(`Server ready at http://localhost:4000${server.graphqlPath}`);
